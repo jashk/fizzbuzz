@@ -5,12 +5,12 @@ namespace Src\Replacers;
 
 class IT implements Replaceable
 {
-    public static function canReplace($number): Bool
+    public function canReplace($number): Bool
     {
         return ($number % 5 === 0);
     }
 
-    public static function replace(): String
+    public function replace(): String
     {
         return 'IT';
     }

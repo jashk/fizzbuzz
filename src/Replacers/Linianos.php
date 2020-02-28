@@ -5,12 +5,12 @@ namespace Src\Replacers;
 
 class Linianos implements Replaceable
 {
-    public static function canReplace($number): Bool
+    public function canReplace($number): Bool
     {
         return ($number % 15 === 0);
     }
 
-    public static function replace(): String
+    public function replace(): String
     {
         return 'Linianos';
     }
