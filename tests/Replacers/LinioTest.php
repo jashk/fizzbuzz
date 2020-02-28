@@ -1,18 +1,20 @@
 <?php
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
-use Src\Replacers\Linianos;
+namespace Tests\Repleacers;
 
-final class LinianosTest extends TestCase
+use PHPUnit\Framework\TestCase;
+use Src\Replacers\Linio;
+
+final class LinioTest extends TestCase
 {
     /**
      * @dataProvider canReplaceableProvider
      */
     public function testCanReplaceable($number, $expected): void
     {
-        $linianos = new Linianos();
-        $this->assertEquals($expected, $linianos->canReplace($number));
+        $linio = new Linio();
+        $this->assertEquals($expected, $linio->canReplace($number));
     }
 
     public function canReplaceableProvider(): array
@@ -20,17 +22,15 @@ final class LinianosTest extends TestCase
         return [
             [1, false],
             [2, false],
-            [3, false],
-            [15, true],
-            [30, true],
-            [60, true],
+            [3, true],
+            [99, true],
             [100, false]
         ];
     }
 
     public function testCanGetReplaceString(): void
     {
-        $linianos = new Linianos();
-        $this->assertEquals('Linianos', $linianos->replace());
+        $linio = new Linio();
+        $this->assertEquals('Linio', $linio->replace());
     }
 }

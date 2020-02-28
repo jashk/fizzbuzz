@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Tests\Repleacers;
+
 use PHPUnit\Framework\TestCase;
 use Src\Replacers\It;
 
