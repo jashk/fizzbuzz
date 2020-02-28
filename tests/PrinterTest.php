@@ -55,7 +55,7 @@ final class PrinterTest extends TestCase
         $printer->print(10, 1, ',');
     }
 
-    public function testCanReplaceNumbersWhitLinioReplacer(): Void
+    public function testCanReplaceNumbersWhithLinioReplacer(): Void
     {
         $this->expectOutputString('1,2,Linio,4,5,Linio,7,8,Linio,10');
         $printer = new Printer([new Linio]);

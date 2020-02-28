@@ -5,6 +5,6 @@ namespace Src\Replacers;
 
 interface Replaceable
 {
-    public static function canReplace(Int $number): Bool;
-    public static function replace(): String;
+    public function canReplace(Int $number): Bool;
+    public function replace(): String;
 }
