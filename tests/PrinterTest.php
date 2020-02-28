@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Tests;
+
 use PHPUnit\Framework\TestCase;
 use Src\Printer;
 use Src\Replacers\Linio;
@@ -59,9 +61,4 @@ final class PrinterTest extends TestCase
         $printer = new Printer([new Linio]);
         $printer->print(10, 1, ',');
     }
-
-
-
-
-    
 }

@@ -32,8 +32,11 @@ class Printer
 
     public function replaceRange(array $range): array
     {
-        return array_map(function (Int $number) {
-            return $this->replace($number);
-        }, $range);
+        return array_map(
+            function (Int $number) {
+                return $this->replace($number);
+            },
+            $range
+        );
     }
 }

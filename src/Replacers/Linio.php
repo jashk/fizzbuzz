@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Src\Replacers;
 
-
 class Linio implements Replaceable
 {
     public static function canReplace($number): Bool
